@@ -1,3 +1,6 @@
+
+//Problem statement: Take a sentence as an input and reverse every word in that sentence.
+
 const readline = require("readline");
 
 //used readline for enabling input from console.

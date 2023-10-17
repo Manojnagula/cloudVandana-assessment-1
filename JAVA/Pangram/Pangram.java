@@ -1,5 +1,5 @@
 
-// Problem statement: 3. Check if the input is pangram or not. (A pangram is a sentence that contains all the
+// Problem statement: Check if the input is pangram or not. (A pangram is a sentence that contains all the
 // alphabets from A to Z)
 
 import java.util.HashSet;
