@@ -1,9 +1,13 @@
 // getting elements
 
 let submit = document.getElementById("end");
+
+// selected radio buttons combindly
 let group1 = document.querySelectorAll('input[type="radio"][name="Group1"]');
 let group2 = document.querySelectorAll('input[type="radio"][name="Group2"]');
 let group3 = document.querySelectorAll('input[type="radio"][name="Group3"]');
+
+
 let male = document.getElementById("male");
 let female = document.getElementById("female");
 let firstName = document.getElementById("FirstName");
@@ -31,6 +35,7 @@ let popupquestion2 = document.getElementById("second-question");
 let popupquestion3 = document.getElementById("third-question");
 let popupquestion4 = document.getElementById("fourth-question");
 
+// function to inject values into the popup fields.
 function popup() {
   popupFirstName.textContent = firstName.value;
   popupLastName.textContent = LastName.value;
