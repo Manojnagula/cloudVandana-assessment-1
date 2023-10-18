@@ -12,11 +12,12 @@ let profession = document.getElementById('profession')
 let mobile = document.getElementById('mobile')
 let dob = document.getElementById('dob');
 let country = document.getElementById('country');
+let suggestions = document.getElementById('suggestions');
 
-var GENDER = ''
 
 
 // Ensuring only one checkbox get checked for gender. 
+var GENDER = ''
 male.addEventListener('change',()=>{
         if(male.checked){
             female.checked=false;
@@ -34,7 +35,6 @@ female.addEventListener('change',()=>{
         }
 });
 
-let radio1 = '';
 // Event listener for submission of form
 submit.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -42,17 +42,18 @@ submit.addEventListener('click',(e)=>{
     document.body.style.overflow='hidden';
     popup();
 
-    Array.from(group1).forEach((radio)=>{
-        if(radio.checked){
-            radio1 = radio.value;
-            console.log(radio.value);
-            console.log(radio1);
-        }
-
-    })
+   
 })
 
-console.log(radio1);
+// Getting selected radio value from radio buttons
+
+function getSelectedRadioButton(radioButton){
+    for(const radio of radioButton){
+        if(radio.checked){
+            return radio.value;
+        }
+    }
+}
 
 
 // grabbing all elements in popup
@@ -67,7 +68,7 @@ let popupGender = document.getElementById('gender-popup')
 let popupquestion1 = document.getElementById('first-question')
 let popupquestion2 = document.getElementById('second-question')
 let popupquestion3 = document.getElementById('third-question')
-let popupquestion4 = document.getElementById('four-question')
+let popupquestion4 = document.getElementById('fourth-question')
 
 
 console.log(GENDER);
@@ -80,6 +81,9 @@ function popup(){
         popupDOB.textContent = dob.value;
         popupCountry.textContent = country.options[country.selectedIndex].value;
         popupGender.textContent = GENDER;
-        popupquestion1.textContent = radio1;
+        popupquestion1.textContent = getSelectedRadioButton(group1);
+        popupquestion2.textContent = getSelectedRadioButton(group2);
+        popupquestion3.textContent = getSelectedRadioButton(group3);
+        popupquestion4.textContent = suggestions.value;
 
 }
