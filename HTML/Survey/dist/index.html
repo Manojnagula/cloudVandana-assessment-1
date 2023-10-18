@@ -1,3 +1,6 @@
+
+    <!-- I used tailwind css for this particular problem unlike vanilla css as earlier  -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -119,6 +122,7 @@
                   id="FirstName"
                   type="text"
                   for="FirstName"
+                  required
                   
                 />
               </div>
@@ -131,6 +135,7 @@
                   type="text"
                   for="LastName"
                   id="LastName"
+                  required
                   
                 />
               </div>
@@ -139,10 +144,10 @@
 
             <!-- D-O-B -->
             <label class="font-semibold" for="DOB">Date Of Birth : </label>
-            <input class="border border-black mb-6"  type="date" id="dob" name="DOB" />
+            <input class="border border-black mb-6"  type="date" id="dob" name="DOB" required />
 
             <!--Country  -->
-            <div class="mb-6">
+            <div required class="mb-6">
               <span class="font-semibold">Country : </span>
               <select class="border border-black" name="country" id="country" required>
                 <option value="" disabled selected>Choose</option>
@@ -183,10 +188,10 @@
 
             <span class="font-semibold mb-3">Gender : </span>
 
-            <input type="checkbox" id="male" name="gender"  />
+            <input type="checkbox" id="male" name="gender" required  />
             <label for="male">Male</label>
 
-            <input type="checkbox" id="female" name="gender" />
+            <input type="checkbox" id="female" name="gender" required />
             <label for="female">Female</label>
 
             <!-- Profesion -->
@@ -194,17 +199,17 @@
               <label class="font-semibold" for="profession"
                 >Professsion :
               </label>
-              <input class="border border-black" type="text" id="profession" />
+              <input class="border border-black" type="text" id="profession" required />
 
               <!-- Email -->
             </div>
             <label class="font-semibold" for="email">EMAIL : </label>
-            <input class="border mb-6 border-black" type="email" id="email" />
+            <input class="border mb-6 border-black" type="email" id="email" required/>
 
             <!-- Mobile -->
             <div>
               <label class="font-semibold" for="mobile">Mobile :</label>
-              <input class="border border-black mb-6" type="text" id="mobile" />
+              <input class="border border-black mb-6" type="text" id="mobile" required />
             </div>
 
             <!-- Other stuff -->
@@ -212,25 +217,25 @@
               <p class="mb-1 font-semibold">
                 Is this first time You are using our products & service?
               </p>
-              <input type="radio"  id="radio1" name="Group1"  value="yes" />
+              <input type="radio"  id="radio1" name="Group1"  value="yes" required/>
               <label for="radio1">yes</label>
-              <input type="radio"  id="radio2" name="Group1" value="no" />
+              <input type="radio"  id="radio2" name="Group1" value="no" required />
               <label for="radio2">no</label>
               <p class="mb-1 mt-6 font-semibold">
                 Would you suggest your friends and colleagues?
               </p>
-              <input type="radio" id="radio3"  name="Group2"  value="yes" />
+              <input type="radio" id="radio3"  name="Group2"  value="yes" required/>
               <label for="radio3">yes</label>
-              <input type="radio"  id="radio4" name="Group2" value="no" />
+              <input type="radio"  id="radio4" name="Group2" value="no"  required/>
               <label for="radio4">no</label>
               <p class="mb-1 mt-6 font-semibold">
                 How satisfied are you with our company overall?
               </p>
-              <input type="radio"  id="radio5" name="Group3" value="satisfied" />
+              <input type="radio"  id="radio5" name="Group3" value="satisfied" required />
               <label for="radio5">Satisfied</label>
-              <input type="radio"  id="radio6" name="Group3" value="Not decided yet" />
+              <input type="radio"  id="radio6" name="Group3" value="Not decided yet" required />
               <label for="radio6">Not decided yet</label>
-              <input type="radio"  id="radio7" name="Group3" value="Unsatisfied" />
+              <input type="radio"  id="radio7" name="Group3" value="Unsatisfied" required />
               <label for="radio7">Unsatisfied</label>
             </div>
             <div>
@@ -246,7 +251,7 @@
                 rows="5"
               ></textarea>
             </div>
-
+              <p class="text-red-600  hidden " id="warning">*All input fields are required</p>
             <!-- Buttons container -->
             <div>
 

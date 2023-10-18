@@ -71,16 +71,22 @@ female.addEventListener('change',()=>{
 });
 
 // Event listener for submission of form
-submit.addEventListener('click',submission)
-
-function submission(e){
+submit.addEventListener('click',(e)=>{
+ if(document.getElementById('my-form').checkValidity()){
     e.preventDefault();
     overlay.classList.remove('hidden')
     document.body.style.overflow='hidden';
+    
     popup();
+ }else{
+    document.getElementById('warning').classList.remove('hidden')
+    e.preventDefault();
+ }
 
 
-}
+})
+
+
 
 // Event listener for reset button
 document.getElementById('reset').addEventListener('click',resetForm)
