@@ -24,11 +24,10 @@
         id="overlay"
       >
         <!-- pop-up -->
-
         <div class="font-sans z-20 flex justify-center w-[100%] h-[100%] items-center">
           <div class="w-[60%] h-auto p-5 bg-slate-200 rounded">
             <div class="w-[100%] flex justify-end">
-              <i class="fa-solid fa-xmark"></i>
+              <i class="fa-solid fa-xmark hover:cursor-pointer hover:rounded-full hover:bg-slate-300 p-2" id="x-mark"></i>
             </div>
 
             <div class="mb-1">
@@ -107,8 +106,9 @@
         >
           <h1 class="text-white text-5xl mb-9 mt-6">Customer Survey Form</h1>
 
+
           <!-- form starting -->
-          <form class="bg-white w-[60%] shadow-lg mb-6 p-11">
+          <form class="bg-white w-[60%] shadow-lg mb-6 p-11" id="my-form">
             <!-- Name section -->
             <div class="flex gap-14 mb-6 w-[100%]">
               <!-- first Name -->
@@ -239,29 +239,30 @@
               </h2>
               <textarea
                 
-                class="border border-black"
+                class="border border-black col-span-5 md:col-span-9"
                 name=""
                 id="suggestions"
-                cols="92"
+                cols="90"
                 rows="5"
               ></textarea>
             </div>
 
             <!-- Buttons container -->
             <div>
-              <button
-                id="reset"
-                class="bg-blue-600 pl-9 pr-9 pt-2 pb-2 text-white mt-6"
-              >
-                RESET
-              </button>
-              <button
-                id="submit"
-                class="bg-blue-600 pl-9 pr-9 pt-2 pb-2 text-white mt-6"
-              >
-                SUBMIT
-              </button>
+
             </div>
+            <button
+            id="end"
+            class="bg-blue-600 pl-9 pr-9 pt-2 pb-2 text-white mt-6 hover:bg-blue-500"
+          >
+            SUBMIT
+          </button>
+          <span  
+          id="reset"
+          class="bg-blue-600 pl-10 pr-10 pt-[9px] pb-[9px] text-white mt-6 hover:bg-blue-500 hover:cursor-pointer"
+        >
+          RESET
+        </span>
           </form>
 
           <!-- bottom text -->
